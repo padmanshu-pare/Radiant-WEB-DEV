@@ -510,6 +510,72 @@
                 border-radius: 0 0 10px 10px;
             }
         }
+
+        /* Trust & Safety */
+        .trust {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            margin-bottom: 30px
+        }
+
+        .trust .trust-item {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4));
+            padding: 12px;
+            border-radius: 10px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            min-width: 200px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform .2s;
+        }
+
+        .trust .trust-item:hover {
+            transform: translateY(-4px)
+        }
+
+        .trust .trust-item strong {
+            display: block;
+            font-size: 14px
+        }
+
+        .trust .trust-item div {
+            font-size: 12px;
+            color: var(--muted)
+        }
+
+        /* Travel Resources */
+        .resources {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .resource-card {
+            padding: 16px;
+            border-radius: 12px;
+            background: linear-gradient(180deg, #fff, #fbfdff);
+            border: 1px solid rgba(15, 23, 36, 0.06);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+            transition: transform .2s;
+            cursor: pointer;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-4px)
+        }
+
+        .resource-card h4 {
+            margin: 0 0 6px;
+            font-size: 16px
+        }
+
+        .resource-card p {
+            margin: 0;
+            font-size: 14px;
+            color: var(--muted)
+        }
     </style>
 </head>
 
@@ -699,18 +765,6 @@
         </div>
     </section>
 
-    <!-- Newsletter -->
-    <section class="newsletter">
-        <div class="container">
-            <h2>Subscribe to Our Newsletter</h2>
-            <p>Get the latest travel deals, destination guides, and exclusive offers delivered to your inbox.</p>
-
-            <form class="newsletter-form">
-                <input type="email" class="newsletter-input" placeholder="Your email address">
-                <button type="submit" class="newsletter-btn">Subscribe</button>
-            </form>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer>
@@ -753,15 +807,15 @@
                 <div class="footer-col">
                     <h3>Contact Info</h3>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Travel Street, Tourism City</li>
-                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-                        <li><i class="fas fa-envelope"></i> info@travelexplorer.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> AB road Behind C21 Mall, INDORE</li>
+                        <li><i class="fas fa-phone"></i> +91 98**85**62</li>
+                        <li><i class="fas fa-envelope"></i> info@Travaura.com</li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2023 Travel Explorer. All rights reserved.</p>
+                <p>&copy; 2025 TravAura. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -828,6 +882,10 @@
                     searchInput.value = '';
                 }
             });
+        }
+        // Simple click action for resource cards
+        function openResource(name) {
+            alert("Opening resource: " + name + " (connect this with your blog or info page)");
         }
     </script>
 </body>
